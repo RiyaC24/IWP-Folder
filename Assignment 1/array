@@ -1,0 +1,26 @@
+let shoppingList = [];
+
+shoppingList.push("Milk", "Bread", "Apples");
+
+console.log("List length:", shoppingList.length);
+
+let breadIndex = shoppingList.indexOf("Bread");
+shoppingList.splice(breadIndex, 1, "Bananas", "Eggs");
+
+let removedItem = shoppingList.pop();
+console.log("Removed item:", removedItem);
+
+shoppingList.sort();
+
+console.log("Index of Milk:", shoppingList.indexOf("Milk"));
+
+let bananaIndex = shoppingList.indexOf("Bananas");
+shoppingList.splice(bananaIndex + 1, 0, "Carrots", "Lettuce");
+
+let drinks = ["Juice", "Pop"];
+
+shoppingList = shoppingList.concat(drinks, drinks);
+
+console.log("Last index of Pop:", shoppingList.lastIndexOf("Pop"));
+
+console.log("Final list:", shoppingList);
