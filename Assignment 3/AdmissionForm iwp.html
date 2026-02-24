@@ -1,0 +1,97 @@
+//  a web page design which gives student admission for primary school
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>vit school Admission</title>
+
+  <style>
+    body {
+      background: linear-gradient(to right, skyblue);
+      margin: 0;
+      padding: 0;
+     }
+
+     
+    h1 {
+      text-align: center;
+      color: red;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 10px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid gray;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 20px;
+      background-color: #4CAF50;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Primary School Admission Form</h1>
+
+    <form>
+      <label>Student Name:</label>
+      <input type="text" placeholder="Enter student name" required>
+
+      <label>Date of Birth:</label>
+      <input type="date" required>
+
+      <label>Gender:</label>
+      <select>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+      </select>
+
+      <label>Class Applying For:</label>
+      <select>
+        <option>Nursery</option>
+        <option>KG</option>
+        <option>1st Grade</option>
+        <option>2nd Grade</option>
+        <option>3rd Grade</option>
+        <option>4th Grade</option>
+        <option>5th Grade</option>
+      </select>
+
+      <label>Parent Name:</label>
+      <input type="text" placeholder="Enter parent name" required>
+
+      <label>Phone Number:</label>
+      <input type="tel" placeholder="Enter phone number" required>
+
+      <label>Address:</label>
+      <textarea placeholder="Enter address"></textarea>
+
+      <button type="submit">Submit Admission</button>
+    </form>
+  </div>
+
+</body>
+</html>
