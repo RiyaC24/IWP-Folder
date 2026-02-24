@@ -1,0 +1,16 @@
+function doingStuff(x) {
+    console.log(x);
+}
+doingStuff("Great!");
+
+let doingArrowStuff = x => console.log(x);
+doingArrowStuff("Great!");
+
+let addTwoNumbers = (x, y) => console.log(x + y);
+addTwoNumbers(5, 3);
+
+let sayHi = () => console.log("Hi");
+sayHi();
+
+const arr = ["squirrel", "alpaca", "buddy"];
+arr.forEach(e => console.log(e));

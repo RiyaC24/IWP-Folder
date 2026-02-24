@@ -1,0 +1,13 @@
+function greet() {
+  return "Hello!";
+}
+console.log(greet());
+
+
+function greet(name = "Guest") 
+{
+  console.log("Hello, " + name);
+}
+
+greet();
+greet("Aman");

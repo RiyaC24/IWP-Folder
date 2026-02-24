@@ -1,0 +1,9 @@
+let v1 = function () {
+console.log("This is Function Callback example.");
+};
+
+function back(x) {
+ x();
+console.log("Inside x Function.");
+}
+back(v1);

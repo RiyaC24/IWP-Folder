@@ -1,0 +1,25 @@
+const readline = require('readline');
+
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+let arr = [];
+let index = 0;
+
+function takeInput() {
+    if (index < 3) {
+        rl.question(`Enter string ${index + 1}: `, (answer) => {
+            arr.push(answer);   // store string
+            index++;
+            takeInput();
+        });
+    } else {
+        console.log("\nString Array:");
+        console.log(arr);
+        rl.close();
+    }
+}
+
+takeInput();
