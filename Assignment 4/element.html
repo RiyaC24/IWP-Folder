@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>createElement() and remove() Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        button {
+            margin: 5px;
+            padding: 8px 12px;
+        }
+        #container {
+            margin-top: 20px;
+            padding: 10px;
+            border: 2px dashed #555;
+        }
+        .box {
+            background-color: #e6f7ff;
+            padding: 10px;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Illustration of createElement() and remove()</h2>
+
+<button onclick="addElement()">Add Element</button>
+<button onclick="removeElement()">Remove Last Element</button>
+
+<div id="container">
+    <!-- New elements will be added here -->
+</div>
+
+<script>
+    function addElement() {
+        // Step 1: Create a new <div> element
+        const newDiv = document.createElement("div");
+
+        // Step 2: Add content to the element
+        newDiv.textContent = "I am a dynamically created element";
+
+        // Step 3: Add a CSS class
+        newDiv.className = "box";
+
+        // Step 4: Append the element to the container
+        document.getElementById("container").appendChild(newDiv);
+    }
+
+    function removeElement() {
+        const container = document.getElementById("container");
+
+        // Remove the last child if it exists
+        if (container.lastElementChild) {
+            container.lastElementChild.remove(); // remove()
+        } else {
+            alert("No elements to remove!");
+        }
+    }
+</script>
+
+</body>
+</html>

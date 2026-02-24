@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interactive Greetings Card Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 40px;
+        }
+        .container {
+            display: flex;
+            gap: 40px;
+        }
+        .form-box, .card-box {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            width: 300px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        input, select, textarea, button {
+            width: 100%;
+            margin: 8px 0;
+            padding: 8px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .card {
+            height: 200px;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        .card h2 {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Interactive Greetings Card Generator</h2>
+
+<div class="container">
+
+    <!-- Input Form -->
+    <div class="form-box">
+        <h3>Enter Card Details</h3>
+
+        <input type="text" id="toName" placeholder="To (Name)">
+        <textarea id="message" placeholder="Your Message"></textarea>
+
+        <select id="bgColor">
+            <option value="#ff6f61">Red</option>
+            <option value="#4CAF50">Green</option>
+            <option value="#2196F3">Blue</option>
+            <option value="#9C27B0">Purple</option>
+        </select>
+
+        <button onclick="generateCard()">Generate Card</button>
+    </div>
+
+    <!-- Greeting Card Output -->
+    <div class="card-box">
+        <h3>Your Greeting Card</h3>
+        <div class="card" id="card">
+            <h2 id="cardTitle">To: Friend</h2>
+            <p id="cardMessage">Your greeting message will appear here</p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    function generateCard() {
+        const name = document.getElementById("toName").value;
+        const message = document.getElementById("message").value;
+        const color = document.getElementById("bgColor").value;
+
+        document.getElementById("cardTitle").innerHTML =
+            name ? "To: " + name : "To: Friend";
+
+        document.getElementById("cardMessage").innerHTML =
+            message ? message : "Have a wonderful day!";
+
+        document.getElementById("card").style.backgroundColor = color;
+    }
+</script>
+
+</body>
+</html

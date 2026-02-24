@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Listeners Example</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 40px;
+        }
+        button, input {
+            margin: 10px;
+            padding: 8px;
+        }
+        #output {
+            margin-top: 20px;
+            font-weight: bold;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Illustration of Event Listeners</h2>
+
+<button id="btnClick">Click Me</button>
+<button id="btnHover">Hover Over Me</button>
+<br>
+
+<input type="text" id="txtKey" placeholder="Type something">
+
+<p id="output">Event output will appear here</p>
+
+<script>
+    // Access elements
+    const btnClick = document.getElementById("btnClick");
+    const btnHover = document.getElementById("btnHover");
+    const txtKey = document.getElementById("txtKey");
+    const output = document.getElementById("output");
+
+    // Click event listener
+    btnClick.addEventListener("click", function () {
+        output.innerHTML = "Button clicked using addEventListener()";
+    });
+
+    // Mouse events
+    btnHover.addEventListener("mouseover", function () {
+        document.body.style.backgroundColor = "#e6f7ff";
+        output.innerHTML = "Mouse over event triggered";
+    });
+
+    btnHover.addEventListener("mouseout", function () {
+        document.body.style.backgroundColor = "white";
+        output.innerHTML = "Mouse out event triggered";
+    });
+
+    // Keyboard event listener
+    txtKey.addEventListener("keydown", function (event) {
+        output.innerHTML = "Key pressed: " + event.key;
+    });
+</script>
+
+</body>
+</html>
+

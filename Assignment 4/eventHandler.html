@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Handler Properties Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        button {
+            padding: 10px 15px;
+            margin: 8px;
+        }
+        #output {
+            margin-top: 20px;
+            font-weight: bold;
+            color: darkblue;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Illustration of Event Handler Properties</h2>
+
+<button id="btnClick">Click Me</button>
+<button id="btnHover">Hover Over Me</button>
+
+<p id="output">Event message will appear here</p>
+
+<script>
+    // Access elements
+    const clickButton = document.getElementById("btnClick");
+    const hoverButton = document.getElementById("btnHover");
+
+    // Assign event handler properties
+    clickButton.onclick = function () {
+        document.getElementById("output").innerHTML =
+            "Button clicked using event handler property <b>onclick</b>";
+    };
+
+    hoverButton.onmouseover = function () {
+        document.body.style.backgroundColor = "#fff4e6";
+        document.getElementById("output").innerHTML =
+            "Mouse over event handled using <b>onmouseover</b> property";
+    };
+
+    hoverButton.onmouseout = function () {
+        document.body.style.backgroundColor = "white";
+        document.getElementById("output").innerHTML =
+            "Mouse out event handled using <b>onmouseout</b> property";
+    };
+</script>
+
+</body>
+</html>
+

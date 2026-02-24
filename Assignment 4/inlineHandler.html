@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inline Event Handler Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        button {
+            padding: 10px 15px;
+            margin: 8px;
+            font-size: 14px;
+        }
+        #message {
+            margin-top: 20px;
+            font-weight: bold;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Inline Event Handler Attributes</h2>
+
+<!-- Inline event handler attributes -->
+<button onclick="showMessage()">Click Me</button>
+<button onmouseover="changeColor()" onmouseout="resetColor()">Hover Over Me</button>
+<button ondblclick="doubleClickAction()">Double Click Me</button>
+
+<p id="message">Event message will appear here</p>
+
+<script>
+    function showMessage() {
+        document.getElementById("message").innerHTML =
+            "Button clicked using <b>onclick</b> inline handler";
+    }
+
+    function changeColor() {
+        document.body.style.backgroundColor = "#e6f7ff";
+    }
+
+    function resetColor() {
+        document.body.style.backgroundColor = "white";
+    }
+
+    function doubleClickAction() {
+        document.getElementById("message").innerHTML =
+            "Button double-clicked using <b>ondblclick</b> inline handler";
+    }
+</script>
+
+</body>
+</html>
+
