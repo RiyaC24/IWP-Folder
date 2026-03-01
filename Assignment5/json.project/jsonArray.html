@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSON Array Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f6f9;
+        }
+
+        h2 {
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 8px 15px;
+            margin: 15px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        table {
+            margin: auto;
+            border-collapse: collapse;
+            width: 60%;
+            background-color: white;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Student Details (JSON Array)</h2>
+<button onclick="displayData()">Display Data</button>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Course</th>
+            <th>Marks</th>
+        </tr>
+    </thead>
+    <tbody id="tableBody"></tbody>
+</table>
+
+<script>
+// JSON array stored in JavaScript
+const students = [
+    { id: 1, name: "Meghana", course: "CSE", marks: 85 },
+    { id: 2, name: "Anita", course: "IT", marks: 90 },
+    { id: 3, name: "Rahul", course: "ECE", marks: 78 }
+];
+
+// Function to display JSON array data
+function displayData() {
+    const tableBody = document.getElementById("tableBody");
+
+    // Clear previous data (prevents duplication)
+    tableBody.innerHTML = "";
+
+    students.forEach(student => {
+        const row = `
+            <tr>
+                <td>${student.id}</td>
+                <td>${student.name}</td>
+                <td>${student.course}</td>
+                <td>${student.marks}</td>
+            </tr>
+        `;
+        tableBody.innerHTML += row;
+    });
+}
+</script>
+
+</body>
+</html>
