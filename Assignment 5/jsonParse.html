@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSON to JavaScript Object</title>
+</head>
+<body>
+
+<h2>JSON Parse Example</h2>
+<p id="demo"></p>
+
+<script>
+    // JSON string
+    const jsonData = '{"name":"John","age":31,"city":"New York"}';
+
+    // Convert JSON to JavaScript object
+    const jsObject = JSON.parse(jsonData);
+
+    // Display data
+    document.getElementById("demo").innerHTML =
+        "Name: " + jsObject.name +
+        "<br>Age: " + jsObject.age +
+        "<br>City: " + jsObject.city;
+</script>
+
+</body>
+</html>
